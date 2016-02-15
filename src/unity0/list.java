@@ -24,9 +24,36 @@ public class list {
     public void add (int d,int index){
         
         top++;
-        
-       for( )
-        
+        if(index<top){
+       for(int i=top-1;i>=index;i--){
+           data[i+1]=data[i];
+       }
+        data[index]=d;
+    }
     }
     
+    public int remove(int n){
+        
+      int re;
+      re=data[n];
+       for(int i=n;i<top;i++){
+           data[i]=data[i+1];
+       }
+      top--;
+      
+      return re;
+              
+    }
+    
+     public void print(){
+        
+        for (int i=0;i<top;i++){
+            
+            
+        
+            System.out.print(" " + data[i]);
+        }
+        System.out.println();
 }
+}
+

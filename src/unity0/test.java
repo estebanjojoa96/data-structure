@@ -14,7 +14,7 @@ public class test {
     public static void main (String[]args){
         testingStacks();
         testingQueve();
-        
+        TestingList();
         
         
     }
@@ -49,6 +49,16 @@ public class test {
         
     }
     
-    
+    public static void TestingList(){
+        list l = new list();
+        
+        for(int i=0;i<15;i++){
+            l.add(i+3, i);
+        }
+        System.out.println("LISTA GENERADA");
+        l.print();
+        
+        
+    }
     
 }
