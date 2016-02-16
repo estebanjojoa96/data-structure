@@ -31,6 +31,36 @@ public class List {
             }
             aux.next=n;
         }
+    }
+    public void Print (){
+        
+       Node aux = head;
+       while (aux != null){
+           System.out.print(" "+aux.data);
+           aux=aux.next;
+       }
+        System.out.println("");
     } 
     
+    public int count (){
+        
+        Node aux= head;
+        int counter =0;
+        while(aux != null){
+            counter++;
+            aux = aux.next;
+        }
+        return counter;
+    } 
+    
+    public void PrintFirtsElement(){
+        
+        if( head != null){
+            System.out.println(""+head.data);
+            
+        }else{
+            System.out.println("-1");
+        }
+        
+    }
 }

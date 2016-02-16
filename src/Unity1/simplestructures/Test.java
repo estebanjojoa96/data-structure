@@ -16,5 +16,18 @@ public class Test {
        l.add(5);
        l.add(10);
        l.add(15);
+       
+       System.out.println("Inicial valves");
+       l.Print();
+       int c = l.count();
+       System.out.println("Total nodes:"+c);
+       System.out.println("Primer numero");
+        l.PrintFirtsElement();
    }
+   
+   
+      
+     
+       
+   
 }
