@@ -51,14 +51,20 @@ public class test {
     
     public static void TestingList(){
         list l = new list();
-        
-        for(int i=0;i<15;i++){
+        System.out.println("TESTING LIST");
+        System.out.print("");
+        for (int i=0; i<10 ; i++){
             l.add(i+3, i);
         }
-        System.out.println("LISTA GENERADA");
+       
+        System.out.println("LIST");
         l.print();
-        
-        
+        System.out.println("ADD LIST");
+        l.add(23, 3);
+        l.print();
+        System.out.println("REMOVE LIST");
+        l.remove(3);
+        l.print();
     }
     
 }
