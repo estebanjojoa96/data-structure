@@ -21,8 +21,26 @@ public class Test {
        l.Print();
        int c = l.count();
        System.out.println("Total nodes:"+c);
-       System.out.println("Primer numero");
-        l.PrintFirtsElement();
+       System.out.print("");
+       
+       System.out.println("first number");
+       l.PrintFirtsElement();
+       System.out.print("");
+       System.out.println("last number");
+       l.PrintLastElement();
+       System.out.print("");
+       System.out.println("remove last number");
+       l.RemoveLastElement();
+       l.Print();
+       System.out.print("");
+       System.out.println("remove first number");
+       l.RemoveFirstElement();
+       l.Print();
+       System.out.print("");
+       System.out.println("number that will be remove");
+       System.out.println(l.Remove(1));
+       System.out.println("List modificade");
+       l.Print();
    }
    
    
