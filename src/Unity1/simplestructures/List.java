@@ -105,13 +105,14 @@ public class List {
     
     public int Remove(int i){
       
-        
+        Node aux = head , p= null;
+    
         if(head==null){
             System.out.println("-1");
         }else if(i==0){
-            head = null;
+            head = head.next;
+            
         }
-        Node aux = head , p= null;
         int counter = 0;
         
         for (;counter<i && aux !=null; counter++){
@@ -122,8 +123,21 @@ public class List {
         
         if(aux != null){
             p.next= aux.next;
+        }else{
+           return -1;
         }
         
+        
      return aux.data;   
+    }
+    
+    public void Duplicate(){
+        if(head==null) return;
+        
+        
+               
+            
+        
+        
     }
 }
