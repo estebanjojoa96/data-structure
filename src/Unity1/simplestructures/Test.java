@@ -45,6 +45,15 @@ public class Test {
        System.out.println(l.Remove(1));
        System.out.println("List modificade");
        l.Print();
+       System.out.println("Duplicating");
+       l.Duplicate();
+       System.out.println("Valves after duplication");
+       l.Print();
+       System.out.print("");
+       System.out.println("Mirror Duplication");
+       l.DuplicateMirror();
+       System.out.println("Valves after mirror duplication");
+       l.Print();
    }
    
    
