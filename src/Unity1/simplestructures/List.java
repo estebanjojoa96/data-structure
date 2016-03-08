@@ -168,4 +168,53 @@ public class List {
             aux=aux.next;
         }
     }
+    
+    public void InsertZeros(){
+        if(head==null) return;
+        
+        Node aux = head,p=head;
+                                   
+        while(aux.next != null){
+            
+            
+            Node n = new Node(0);
+            aux=aux.next;
+             p.next=n;
+             n.next=aux;
+             p=aux;
+          
+        }
+        
+    }
+    
+    public void removeMiddle(){
+        
+        Node aux=head, p = head;
+        int c = count();
+        if(c%2==0){
+           
+            for(int i=0;i<c/2;i++){
+                
+            }
+           
+        }
+        
+        
+    }
+    
+    
+    public void CountOdds(){
+        int d=0;
+        int cont=0;
+        Node aux = head;
+        aux.data=d;
+        while(aux.next!=null){
+            if(d%2==1){
+                cont ++;
+            }else{ return;
+        }
+        
+    }
+    
+}
 }

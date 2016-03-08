@@ -54,6 +54,18 @@ public class Test {
        l.DuplicateMirror();
        System.out.println("Valves after mirror duplication");
        l.Print();
+       System.out.println("list initial");
+       l.Print();
+       l.InsertZeros();
+       System.out.println("List Zeros");
+       l.Print();
+       System.out.print("");
+       System.out.println("List initial");
+       l.Print();
+       System.out.println("Count odds");
+       l.CountOdds();
+       l.Print();
+       
    }
    
    
