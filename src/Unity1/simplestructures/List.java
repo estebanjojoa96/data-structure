@@ -194,6 +194,7 @@ public class List {
         if(c%2==0){
            
             for(int i=0;i<c/2;i++){
+               
                 
             }
            
@@ -203,18 +204,23 @@ public class List {
     }
     
     
-    public void CountOdds(){
-        int d=0;
-        int cont=0;
-        Node aux = head;
-        aux.data=d;
-        while(aux.next!=null){
-            if(d%2==1){
-                cont ++;
-            }else{ return;
-        }
+    public int CountOdds(){
         
+        
+        Node aux = head;
+        int cont=0;
+        while(aux.next!=null){
+            
+            if(aux.data%2==1){
+                cont ++;
+                aux= aux.next;  
+                                
+            }else{ 
+                System.out.println("-1");
+                
+        }
+             
     }
-    
+  return cont;  
 }
 }

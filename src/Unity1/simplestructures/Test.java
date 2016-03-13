@@ -63,8 +63,12 @@ public class Test {
        System.out.println("List initial");
        l.Print();
        System.out.println("Count odds");
-       l.CountOdds();
-       l.Print();
+       
+       int r = l.CountOdds();
+       System.out.println(""+ r);
+       
+       
+       
        
    }
    
