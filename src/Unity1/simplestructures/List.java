@@ -187,22 +187,32 @@ public class List {
         
     }
     
-    public void removeMiddle(){
+    public void RemoveMiddle(){
         
         Node aux=head, p = head;
         int c = count();
+        int m = c/2;
+        
+            
         if(c%2==0){
            
-            for(int i=0;i<c/2;i++){
-               
+            for(int i=0;i<m-1;i++){
+              p=aux;
+              aux=aux.next;
                 
-            }
-           
+            
         }
+          p.next=aux.next;       
+   
+     }else if(c%2==1){
         
-        
+        for(int j=0; j<m+1;j++)
+            p=aux;
+        aux=aux.next;
+            
+        }
+         p.next=aux.next;
     }
-    
     
     public int CountOdds(){
         
@@ -210,17 +220,80 @@ public class List {
         Node aux = head;
         int cont=0;
         while(aux.next!=null){
+            aux= aux.next;
             
             if(aux.data%2==1){
                 cont ++;
-                aux= aux.next;  
+                  
                                 
-            }else{ 
-                System.out.println("-1");
+            }
+                
                 
         }
-             
+      return cont;        
     }
-  return cont;  
-}
+  
+
+    
+    public void RemoveIntercalated(){
+        
+        Node aux = head, p=head;
+        
+        int c =  count();
+        for(int i=0; i<c; i++){
+            
+            if(i%2==1){
+                
+                p.next=aux.next;// lo desconecta
+               
+            }
+            p=aux;  
+            aux=aux.next;
+        }        
+              
+    }
+    
+    public int DuplicateIntercalated(){
+        
+        Node p=head, aux=head;
+        
+        while(aux!=null){
+            
+             Node n=new Node (p.data);
+             aux=aux.next;
+             p.next=n;
+             n.next=aux;
+             p=aux;
+            
+            
+        }
+        return 0;
+        
+    }
+    
+    public void RemoveRecurrents(){
+        
+        Node p=head,aux=head,back=head;
+        
+        
+        while(aux.next!=null){
+            
+            p=head;
+            while(p!=aux){
+               
+                if(p.data==aux.data){
+                    back.next=aux.next;
+                     aux=aux.next;
+                }
+                p=p.next;
+                
+            }
+                           
+            back=aux;
+            aux=aux.next;
+        }  
+    }
+    
+    
+    
 }

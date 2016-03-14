@@ -14,11 +14,20 @@ public class Test {
    public static void main (String [] args){
        List l = new List();
        l.add(5);
+       
        l.add(10);
+       
        l.add(15);
+       
        l.add(25);
+       
        l.add(30);
+       
        l.add(40);
+       
+       
+       
+       
        
        
        System.out.println("Inicial valves");
@@ -45,6 +54,9 @@ public class Test {
        System.out.println(l.Remove(1));
        System.out.println("List modificade");
        l.Print();
+       
+       
+       
        System.out.println("Duplicating");
        l.Duplicate();
        System.out.println("Valves after duplication");
@@ -54,23 +66,49 @@ public class Test {
        l.DuplicateMirror();
        System.out.println("Valves after mirror duplication");
        l.Print();
+       System.out.print("");
+       System.out.println("Exam Exercises");
+       System.out.println("Insert zeros");
        System.out.println("list initial");
        l.Print();
        l.InsertZeros();
        System.out.println("List Zeros");
        l.Print();
        System.out.print("");
+       System.out.println("Count Odds");
        System.out.println("List initial");
        l.Print();
        System.out.println("Count odds");
        
-       int r = l.CountOdds();
-       System.out.println(""+ r);
+       System.out.println(""+l.CountOdds());
+       
+       System.out.println("Remove Middel");
+       System.out.println("List Initial");
+       l.Print();
+       l.RemoveMiddle();
+       System.out.println("List Modified");
+       l.Print();
+       System.out.print("");
+       
+       System.out.println("Exercises Plataform University");
+       
+       System.out.println("Duplicate Intercalated");
+       System.out.print("");
+       System.out.println("List Inicial");
+       l.Print();
+       l.DuplicateIntercalated();
+       System.out.println("List Duplicated");
+       l.Print();
+       
+       System.out.println("Remove Intercalated");
+       l.RemoveIntercalated();
+       l.Print();
        
        
        
        
-   }
+       
+}
    
    
       
