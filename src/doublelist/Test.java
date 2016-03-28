@@ -5,7 +5,7 @@
  */
 package doublelist;
 
-import Unity1.simplestructures.List;
+
 
 /**
  *
@@ -38,6 +38,56 @@ public class Test {
          System.out.println("Last remove last");
          l.RemoveLast();
          l.print();
+         
+         System.out.println("Reverse print");
+         System.out.println("List Normal");
+         l.print();
+         System.out.println("List Reverse");
+         l.ReversePrint();
+         l.print();
+         
+         System.out.println("Push");
+         
+            l.Push(2);
+            System.out.println("List Modificate");
+            l.print();
+         System.out.print("");
+         
+         System.out.println("Count nodes");
+         int r = l.count();
+         System.out.println(""+r);
+         
+         System.out.print("");
+         System.out.println("List Initial");
+         l.print();
+         
+            System.out.println("Duplicate Nodes");
+            l.Duplicate();
+            l.print();
+            
+            
+         System.out.println("List Initial");
+         l.print();
+         
+            System.out.println("Duplicate Mirror");
+            l.DuplicateMirror();
+            l.print();
+            
+            
+         System.out.println("Remove");
+         System.out.println("List Initial");
+         l.print();
+         
+            System.out.println("number that will be remove");
+            System.out.println(l.Remove(4));
+            System.out.println("List Modificade");
+            l.print();
+         
+         System.out.println("Print first element");
+         l.PrintFirtsElement();
+         
+         System.out.println("Print last element");
+         l.PrintLastElement();
                      
      }
      

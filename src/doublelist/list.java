@@ -63,6 +63,62 @@ public class list {
          }
      
   }
+      
+      public int Remove(int i){
+      
+        Node aux = head , p= null;
+    
+        if(head==null){
+            System.out.println("-1");
+        }else if(i==0){
+            head = head.next;
+            
+        }
+        int counter = 0;
+        
+        for (;counter<i && aux !=null; counter++){
+            p=aux;
+            aux=aux.next;
+        
+    }
+        
+        if(aux != null){
+            p.next= aux.next;
+        }else{
+           return -1;
+        }
+        
+        
+     return aux.data;   
+    }
+      
+      public void PrintFirtsElement(){
+        
+        if( head != null){
+            System.out.println(""+head.data);
+            
+        }else{
+            System.out.println("-1");
+        }
+        
+    }
+      
+      public void PrintLastElement(){
+        
+        
+        if(head==null){
+            System.out.println("-1");
+        }else{
+            
+           Node aux = head;
+           while(aux.next!=null){
+               aux=aux.next;
+           }
+            System.out.println(" " + aux.data);
+        }
+        
+    }
+      
 public void RemoveFirst(){
        if(head==null)return;
              
@@ -89,12 +145,84 @@ public void RemoveLast(){
             
 }
 
+public int count (){
+        
+        Node aux= head;
+        int counter =0;
+        while(aux != null){
+            counter++;
+            aux = aux.next;
+        }
+        return counter;
+    } 
+
 public void Invert(){
     
     
     
 }
+
+public void Duplicate (){
+    
+    if (head==null) return;
+    
+    Node aux=head,last=head;
+    int c = count();
+    
+    while(last.next!=null){
+        last=last.next;
         
-                 
-         
+    }
+    
+    for(int i=0; i<c; i++){
+        
+        Node n= new Node(aux.data);
+        
+        n.back=last;
+        last.next=n;
+        n.next=null;
+        
+        aux=aux.next;
+        last=last.next;
+        
 }
+        
+}
+
+public void DuplicateMirror(){
+    
+    if (head==null) return;
+    
+    Node aux=head,last=head;
+    int c = count();
+    
+    while(last.next!=null){
+        last=last.next;
+        aux=last;
+       
+        
+    }
+    
+    
+    
+    while(aux.back!=null){
+        
+        Node n= new Node(aux.data);
+        
+        n.back=last;
+        last.next=n;
+        n.next=null;
+        
+        last=last.next;
+        aux= aux.back;
+        
+        System.out.println(""+aux.data);
+    }
+        
+}
+    
+    
+    
+}
+         
+
