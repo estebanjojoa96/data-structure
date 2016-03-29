@@ -29,6 +29,7 @@ public class list {
                aux=aux.next; 
             }
             aux.next=n;
+            n.back= aux;
         }
     }
   
@@ -47,8 +48,8 @@ public class list {
          while(aux.next != null){
               aux = aux.next;
          }
-          while ( aux.next!= null){
-             System.out.println(" "+aux.data);
+          while ( aux!= null){
+             System.out.print(" "+aux.data);
               aux=aux.back;
           }
       }
@@ -158,6 +159,27 @@ public int count (){
 
 public void Invert(){
     
+    Node aux=head;
+    
+    while(aux.next!=null){
+        aux=aux.next;
+}
+    Node last=aux;
+    Node head2=aux;
+    aux.next=aux.back;
+    aux.back=null;
+    int c=count();
+    
+    for(int i=1;i<c;i++){
+        
+    last=aux;
+    aux=aux.back;
+    aux.next=aux.back;
+    aux.back=last;
+    
+}
+    
+    head= head2;
     
     
 }
@@ -194,31 +216,30 @@ public void DuplicateMirror(){
     if (head==null) return;
     
     Node aux=head,last=head;
-    int c = count();
+   
     
     while(last.next!=null){
         last=last.next;
-        aux=last;
+       
        
         
     }
+    aux=last;
     
     
-    
-    while(aux.back!=null){
+    while(aux!=null){
         
         Node n= new Node(aux.data);
         
         n.back=last;
         last.next=n;
-        n.next=null;
+        
         
         last=last.next;
         aux= aux.back;
         
-        System.out.println(""+aux.data);
-    }
         
+    }
 }
     
     
