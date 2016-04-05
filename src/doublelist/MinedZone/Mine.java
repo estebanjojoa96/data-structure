@@ -5,7 +5,11 @@
  */
 package doublelist.MinedZone;
 
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.image.ImageObserver;
 
 /**
  *
@@ -31,8 +35,21 @@ public class Mine {
     
     public void paint(Graphics g,boolean current){
         
+        Image image;
+        if(state==false){
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads");
+        }else{
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads");
+        }
         
+        g.drawImage(image, x-24, y-24,(ImageObserver)z);
         
+        if(current==true){
+            g.setColor(Color.RED);
+        }else{
+            g.setColor(Color.WHITE);
+        }
+        g.drawRect(-25, y-25, 50, 50);
     }
     
 }
