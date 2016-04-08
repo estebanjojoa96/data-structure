@@ -53,6 +53,7 @@ public class list {
               aux=aux.back;
           }
       }
+   
       public void Push(int d){
           Node n = new Node(d);
           if(head==null){
@@ -240,9 +241,30 @@ public void DuplicateMirror(){
         
         
     }
+    
 }
     
-    
+    public void InsertZeros(){
+        
+        Node aux=head,p=head;
+        
+        while(aux.next!=null){
+            
+            Node n = new Node (0);
+            aux=aux.next;
+            
+            n.next=aux;
+            aux.back=n;
+            p.next=n;
+            n.back=p;
+            
+            
+             p=aux;
+           
+            
+        }
+        
+    }
     
 }
          

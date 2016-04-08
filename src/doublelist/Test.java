@@ -26,9 +26,9 @@ public class Test {
        
        l.add(40);  
        
-         l.Invert();
-         l.print();
-       
+//         l.Invert();
+//         l.print();
+//       
 //         System.out.println("Remove First");
 //         System.out.println("List Initial");
 //         l.print();
@@ -93,7 +93,14 @@ public class Test {
 //         
 //         System.out.println("Print last element");
 //         l.PrintLastElement();
-//                     
+//         
+         System.out.println("Insert Zeros");
+         System.out.println("Lista inicial");
+         l.print();
+         System.out.println("Inserting Zeros");
+         l.InsertZeros();
+         l.print();
+                     
      }
      
             
