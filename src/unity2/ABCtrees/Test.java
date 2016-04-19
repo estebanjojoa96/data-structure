@@ -21,6 +21,12 @@ public class Test {
        int v=13;
        System.out.print("Path to" + v + ":");
        t.printpath(v);
+       
+       if(t.isLeaf(v)){
+           System.out.println("");
+       }else{
+           System.out.println("");
+       }
    }   
 }
     

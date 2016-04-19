@@ -68,6 +68,20 @@ public class tree {
    
    public boolean isLeaf(int d){
        
+       Node aux=root;
+       while(aux!=null){
+           if(d>aux.data){
+               aux=aux.right;
+           }else if(d<aux.data){
+               aux=aux.left;
+           }else{
+               if(aux.right==null&&aux.left==null){
+                   return true;
+               }else{
+                   return false;
+               }
+           }
+       }
        
        return false;
        
