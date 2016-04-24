@@ -37,9 +37,9 @@ public class Mine {
         
         Image image;
         if(state==false){
-            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads");
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads\\mine.png");
         }else{
-            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads");
+            image = Toolkit.getDefaultToolkit().getImage("C:\\Users\\deivyponal\\Downloads\\boom.png");
         }
         
         g.drawImage(image, x-24, y-24,(ImageObserver)z);

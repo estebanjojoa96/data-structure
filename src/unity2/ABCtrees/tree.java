@@ -6,6 +6,7 @@
 package unity2.ABCtrees;
 
 import java.util.Vector;
+import unity0.Stack;
 
 /**
  *
@@ -85,5 +86,89 @@ public class tree {
        
        return false;
        
+   }
+   
+   public void print(){
+       Node aux=root;
+       Stack <Node> s = new Stack <Node> ();
+       while(aux!=null){
+           s.Push(aux);
+           aux=aux.left;
+       }
+       while(!s.empty()){
+           aux=s.Pop();
+           System.out.println(""+aux.data);
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.Push(aux);
+               aux=aux.left;
+           }
+       }
+   }
+   
+   public int Count(){
+       
+       int cont=0;
+       Node aux=root;
+       Stack <Node> s = new Stack <Node> ();
+       while(aux!=null){
+           s.Push(aux);
+           aux=aux.left;
+       }
+        while(!s.empty()){
+           aux=s.Pop();
+           cont++;
+           aux=aux.right;
+           
+           while(aux!=null){
+               s.Push(aux);
+               aux=aux.left;
+           }
+       }
+        return cont;
+   }
+   
+   public void Printleafs(){
+       
+       Node aux = root;
+       Stack <Node> s = new Stack <Node> ;
+       while(aux!=null){
+           s.Push(aux);
+           aux=aux.left;
+       }
+        while(!s.empty()){
+           aux=s.Pop();
+           aux=aux.right;
+           
+           if(aux.left==null&&aux.right==null){
+               System.out.println(""+aux.data);
+           }
+           
+           while(aux!=null){
+               s.Push(aux);
+               aux=aux.left;
+           }
+       }
+   }
+   
+   public int Max(){
+       if(root==null)return -1;
+       
+       Node aux=root;
+       while(aux.right!=null){
+           aux=aux.right;
+       }
+       return aux.data;
+   }
+   
+    public int Min(){
+       if(root==null)return -1;
+       
+       Node aux=root;
+       while(aux.left!=null){
+           aux=aux.left;
+       }
+       return aux.data;
    }
 }
