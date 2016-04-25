@@ -6,7 +6,7 @@
 package unity2.ABCtrees;
 
 import java.util.Vector;
-import unity0.Stack;
+import java.util.Stack;
 
 /**
  *
@@ -14,6 +14,7 @@ import unity0.Stack;
  */
 public class tree {
    private  Node root;
+  
    
    public tree(){
        root=null;
@@ -90,18 +91,18 @@ public class tree {
    
    public void print(){
        Node aux=root;
-       Stack <Node> s = new Stack <Node> ();
+       Stack <Node> s = new Stack <Node>();
        while(aux!=null){
-           s.Push(aux);
+           s.push(aux);
            aux=aux.left;
        }
        while(!s.empty()){
-           aux=s.Pop();
+           aux=s.pop();
            System.out.println(""+aux.data);
            aux=aux.right;
            
            while(aux!=null){
-               s.Push(aux);
+               s.push(aux);
                aux=aux.left;
            }
        }
@@ -111,18 +112,18 @@ public class tree {
        
        int cont=0;
        Node aux=root;
-       Stack <Node> s = new Stack <Node> ();
+       Stack <Node> s = new Stack <Node>();
        while(aux!=null){
-           s.Push(aux);
+           s.push(aux);
            aux=aux.left;
        }
         while(!s.empty()){
-           aux=s.Pop();
+           aux=s.pop();
            cont++;
            aux=aux.right;
            
            while(aux!=null){
-               s.Push(aux);
+               s.push(aux);
                aux=aux.left;
            }
        }
@@ -132,13 +133,13 @@ public class tree {
    public void Printleafs(){
        
        Node aux = root;
-       Stack <Node> s = new Stack <Node> ;
+       Stack <Node> s = new Stack <Node>();
        while(aux!=null){
-           s.Push(aux);
+           s.push(aux);
            aux=aux.left;
        }
         while(!s.empty()){
-           aux=s.Pop();
+           aux=s.pop();
            aux=aux.right;
            
            if(aux.left==null&&aux.right==null){
@@ -146,7 +147,7 @@ public class tree {
            }
            
            while(aux!=null){
-               s.Push(aux);
+               s.push(aux);
                aux=aux.left;
            }
        }

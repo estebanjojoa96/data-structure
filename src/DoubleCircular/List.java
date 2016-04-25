@@ -29,5 +29,30 @@ public class List {
         
     }
     
+    public void add(int d){
+                   
+        Node aux=head,p=head;
+        Node n = new Node (d);
+        
+        if(head==null){
+            head=n;
+        }else{
+                      
+          do{ 
+              
+            p=aux;
+            aux=aux.next;
+          }  while(aux!=head);
+               
+                            
+          n.next=p;
+          p.next=n;
+          n.back=p;
+          p.back=n;
+        }
+               
+      
+    }
+    
     
 }

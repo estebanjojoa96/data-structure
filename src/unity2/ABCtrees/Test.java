@@ -27,7 +27,14 @@ public class Test {
        }else{
            System.out.println("");
        }
-   }   
+       
+       t.Max();
+       t.Min();
+       t.Printleafs();
+       t.Count();
+       
+   }
+   
 }
     
 
