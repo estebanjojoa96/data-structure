@@ -27,12 +27,21 @@ public class Test {
        }else{
            System.out.println("");
        }
+       System.out.println("print tree");
+       t.print();
+       System.out.print("");
        
        t.Max();
-       t.Min();
-       t.Printleafs();
-       t.Count();
        
+       t.Min();
+       //t.Printleafs();
+       t.Count();
+       System.out.println("recuersive print");
+       
+       t.recursivePrint();
+       System.out.println("recursive count");
+      int r = t.recursiveCount();
+       System.out.println("Total nodes "+r);
    }
    
 }
