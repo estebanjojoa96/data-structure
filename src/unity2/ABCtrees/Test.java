@@ -53,6 +53,12 @@ public class Test {
        
        System.out.println("Print Leafs");
        t.PrintLeafsR();
+       System.out.println("");
+       System.out.println("HEIGHT");
+       System.out.println(""+t.Height());
+       System.out.println("");
+       System.out.println("Draw Tree");
+       t.Draw();
    }
    
    

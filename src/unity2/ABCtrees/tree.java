@@ -5,8 +5,11 @@
  */
 package unity2.ABCtrees;
 
+import java.awt.Graphics;
 import java.util.Vector;
 import java.util.Stack;
+import javax.swing.JFrame;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 /**
  *
@@ -261,17 +264,14 @@ public class tree {
         
         if(r==null) return;
         
+        if(r.left==null&&r.right==null){
+         System.out.println(""+r.data); 
+         return;
+        }
         PrintLeafsR(r.left);
-        if(r.left==null){
-         System.out.println(""+r.data);   
-        }
-         PrintLeafsR(r.right);
-         if(r.right==null){
-            System.out.println(""+r.data);
-        }
-                           
-        
-    }
+        PrintLeafsR(r.right);
+                                        
+      }
     
     
    public int Height (){
@@ -280,7 +280,55 @@ public class tree {
    private int Height (Node r){
        
        if(r==null) return 0;
-              
-       return //UNDER CONSTRUCTION
+       
+       int a = Height(r.left);
+       int b = Height(r.right);
+       
+       return Math.max(a, b)+1;
+   }
+   
+   public void Draw(){
+      
+       JFrame f = new JFrame(){
+          public void paint (Graphics g){
+              Draw(root,20,40,g);
+          } 
+       };
+       
+       f.setSize(600, 400);
+       f.setVisible(true);
+       f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+   }
+   
+   class Info{
+       int xroot,xfinal;
+   }
+   
+   private Info Draw(Node r,int x,int y,Graphics g){
+       
+       Info rootInfo= new Info();
+       rootInfo.xfinal=x;
+       
+       if (r==null) return rootInfo;
+       
+       Info leftInfo,rightInfo;
+       
+       leftInfo=Draw(r.left,x,y+40,g);
+       
+       x=leftInfo.xfinal;
+       g.drawOval(x, y, 30, 30);
+       g.drawString(""+r.data,x+10,y+20);
+       rootInfo.xroot=x;
+       
+       rightInfo=Draw(r.right,x+30,y+40,g);
+       rootInfo.xfinal=rightInfo.xfinal;
+       
+       if(r.left!=null){
+           g.drawLine(rootInfo.xroot+5, y+25,leftInfo.xroot+15, y+40);
+       }
+       if(r.right!=null){
+           g.drawLine(rootInfo.xroot+25, y+25, rightInfo.xroot+15, y+40);
+       }
+       return rootInfo;
    }
 }
