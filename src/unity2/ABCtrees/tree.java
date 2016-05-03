@@ -202,4 +202,75 @@ public class tree {
         recursiveCount(r.right) +1;
 }
     
+   public void PreOrderPrint(){
+        
+        PreOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void PreOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        System.out.println(""+ r.data);
+        PreOrderPrint(r.left);
+        PreOrderPrint(r.right);
+    } 
+    
+     public void inOrderPrint(){
+        
+        inOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void inOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        
+        inOrderPrint(r.left);
+        System.out.println(""+ r.data);
+        inOrderPrint(r.right);
+    } 
+    
+     public void PostOrderPrint(){
+        
+        PostOrderPrint(root);
+        System.out.println();
+        
+    }
+    
+    private void PostOrderPrint(Node r){
+        
+        if(r==null) return;
+        
+        
+        PostOrderPrint(r.left);
+        PostOrderPrint(r.right);
+        System.out.println(""+ r.data);
+    } 
+    
+    public void PrintLeafsR(){
+        PrintLeafsR(root);
+        System.out.println();
+    }
+    
+    private void PrintLeafsR(Node r){
+        
+        if(r==null) return;
+        
+        PrintLeafsR(r.left);
+        if(r.left==null){
+         System.out.println(""+r.data);   
+        }
+         PrintLeafsR(r.right);
+         if(r.right==null){
+            System.out.println(""+r.data);
+        }
+                           
+        
+    }
+   
 }

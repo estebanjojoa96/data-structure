@@ -42,7 +42,20 @@ public class Test {
        System.out.println("recursive count");
       int r = t.recursiveCount();
        System.out.println("Total nodes "+r);
+       System.out.println("");
+       
+       System.out.println("Post Order Print");
+       t.PostOrderPrint();
+       System.out.println("Pre Order Print");
+       t.PreOrderPrint();
+       System.out.println("In Order Print");
+       t.inOrderPrint();
+       
+       System.out.println("Print Leafs");
+       t.PrintLeafsR();
    }
+   
+   
    
 }
     
