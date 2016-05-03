@@ -272,5 +272,15 @@ public class tree {
                            
         
     }
-   
+    
+    
+   public int Height (){
+       return Height(root);
+   }
+   private int Height (Node r){
+       
+       if(r==null) return 0;
+              
+       return //UNDER CONSTRUCTION
+   }
 }
