@@ -388,5 +388,11 @@ public class tree {
      
               
    }
-  
+   
+   public void Prune(){
+       
+   }
+  public void Complete(){
+      
+  }
 }
