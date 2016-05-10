@@ -59,10 +59,18 @@ public class Test {
        System.out.println("");
        System.out.println("Draw Tree");
        t.Draw();
+       
+       System.out.println(""+ t.isComplete());
+       
+       System.out.println(""+ t.Exist(4));
+       System.out.println("PRUEBA DE FALSO");
+       System.out.println("");
+       System.out.println(""+ t.Exist(50));
+       t.invert();
    }
    
    
-   
+         
 }
     
 
