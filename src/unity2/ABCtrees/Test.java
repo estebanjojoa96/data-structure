@@ -77,7 +77,7 @@ public class Test {
        System.out.println("REVERSE PRINT");
        t.reversePrint();
        System.out.println("PRINT MISSINGS");
-       t.PrintMissings();
+       //t.PrintMissings();
    }
    
    
