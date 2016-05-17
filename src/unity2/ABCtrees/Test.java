@@ -14,7 +14,7 @@ public class Test {
    
    public static void main (String args []){
       tree t = new tree();
-       int values[] = {8,4,16,2,6,12,20,1,10,14,13,15};
+       int values[] = {8,4,16,5,6,17,20,1,10,14,13,15};
        for (int i=0; i<values.length; i++){
            t.add(values[i]);
        }
@@ -68,7 +68,16 @@ public class Test {
        System.out.println(""+ t.Exist(50));
        //t.invert();
        //t.Prune();
+       System.out.println("COUNT ODDS");
+       System.out.println(t.CountOdds());
+       System.out.println("COMPLETE");
        t.Complete();
+       System.out.println("SON'S ALONE'S");
+       t.PrintSonAlone();
+       System.out.println("REVERSE PRINT");
+       t.reversePrint();
+       System.out.println("PRINT MISSINGS");
+       t.PrintMissings();
    }
    
    

@@ -17,10 +17,12 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
  */
 public class tree {
    private  Node root;
+   int cont;
   
    
    public tree(){
        root=null;
+       cont=0;
    }
    
    public void add (int d){
@@ -430,5 +432,75 @@ public class tree {
       }else if (r.left!=null && r.right==null){
            this.add(r.data+1);
      }
+  }
+  
+  public int CountOdds(){
+      return CountOdds(root);
+  }
+  
+  private int CountOdds(Node r){
+     
+      if(r==null) return 0;
+      
+      
+      if(r.data%2==1){
+          cont++; 
+      }
+      CountOdds(r.right);
+      CountOdds(r.left);
+      
+      return cont+1;
+      
+  }
+  
+  public void PrintSonAlone(){
+      PrintSonAlone(root);
+  }
+  
+  private void PrintSonAlone(Node r){
+      
+      if(r==null) return;
+      
+      PrintSonAlone(r.left);
+      PrintSonAlone(r.right);
+      
+      if(r.left==null && r.right != null ){
+          System.out.println(""+r.right.data);
+      }else if (r.left!=null && r.right==null){
+          System.out.println(""+r.left.data);
+      }
+  }
+  
+  public void reversePrint(){
+      reversePrint(root);
+  }
+  
+  private void reversePrint(Node r){
+      
+      if(r==null) return;
+      
+      reversePrint(r.right);
+      System.out.println(""+r.data);
+      reversePrint(r.left);
+  }
+  
+  public void PrintMissings(){
+      PrintMissings(root);
+  }
+  
+  private void PrintMissings(Node r){
+      
+      if (r==null) return;
+     
+      
+      for(int i=r.left.data+1; i<r.data; i++){
+          System.out.println(""+i);
+      }
+      if(r.right!=null){
+          
+          for(int i=r.data+1; i< r.right; i++){
+          System.out.println(""+i);
+      }
+      }
   }
 }
