@@ -484,23 +484,23 @@ public class tree {
       reversePrint(r.left);
   }
   
-  public void PrintMissings(){
-      PrintMissings(root);
-  }
-  
-  private void PrintMissings(Node r){
-      
-      if (r==null) return;
-     
-      
-      for(int i=r.left.data+1; i<r.data; i++){
-          System.out.println(""+i);
-      }
-      if(r.right!=null){
-          
-          for(int i=r.data+1; i< r.right; i++){
-          System.out.println(""+i);
-      }
-      }
-  }
+//  public void PrintMissings(){
+//      PrintMissings(root);
+//  }
+//  
+//  private void PrintMissings(Node r){
+//      
+//      if (r==null) return;
+//     
+//      
+//      for(int i=r.left.data+1; i<r.data; i++){
+//          System.out.println(""+i);
+//      }
+//      if(r.right!=null){
+//          
+//          for(int i=r.data+1; i< r.right; i++){
+//          System.out.println(""+i);
+//      }
+//      }
+//  }
 }
