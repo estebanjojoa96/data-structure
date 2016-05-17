@@ -66,7 +66,9 @@ public class Test {
        System.out.println("PRUEBA DE FALSO");
        System.out.println("");
        System.out.println(""+ t.Exist(50));
-       t.invert();
+       //t.invert();
+       //t.Prune();
+       t.Complete();
    }
    
    

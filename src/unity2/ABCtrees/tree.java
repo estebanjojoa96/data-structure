@@ -388,11 +388,47 @@ public class tree {
      
               
    }
-   
    public void Prune(){
-       
+       Prune(root);
    }
-  public void Complete(){
+   
+   private void Prune(Node r){
+              
+      if (r==null) return;
       
+       Prune(r.left);
+       Prune(r.right);
+      
+      if (r.left==null && r.right != null )  {
+          r.right=null;
+          
+      }else if (r.left!=null && r.right==null){
+          r.left=null;
+     }
+      
+      
+   }
+
+      
+ 
+  public void Complete(){
+       
+      Complete(root);
+      
+  }
+  private void Complete (Node r){
+      
+      if (r==null) return;
+      
+       Complete(r.left);
+       Complete(r.right);
+      
+      if (r.left==null && r.right != null )  {
+          
+          this.add(r.data-1);
+          
+      }else if (r.left!=null && r.right==null){
+           this.add(r.data+1);
+     }
   }
 }
