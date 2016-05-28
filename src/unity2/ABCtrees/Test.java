@@ -78,6 +78,11 @@ public class Test {
        t.reversePrint();
        System.out.println("PRINT MISSINGS");
        //t.PrintMissings();
+       t.balance();
+       t.equilibriumFactor();
+       t.remove(10);
+       
+               
    }
    
    
